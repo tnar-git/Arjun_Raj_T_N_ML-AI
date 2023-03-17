@@ -1,8 +1,8 @@
-git add --all
+git add .
 
 if [ -n "$1" ] ;then 
-    git commit -a -m "$1"
+    git commit -m "$1"
 else
-    git commit -a -m "$(date)"
+    git commit -m "$(date)"
 fi
 git push origin
