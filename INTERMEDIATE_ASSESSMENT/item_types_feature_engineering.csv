@@ -1,0 +1,17 @@
+item_type,value_counts,tasty_addictive,instant_use,healthy,shelf_life
+Fruits and Vegetables,1232,0,0,1,0
+Snack Foods,1200,2,1,0,3
+Household,910,0,0.5,1,3
+Frozen Foods,856,1,0.5,0.5,3
+Dairy,682,1,1,1,0
+Canned,649,0,1,0,6
+Baking Goods,648,0,0,1,4
+Health and Hygiene,520,0,1,1,6
+Soft Drinks,445,3,1,0,2
+Meat,425,0,0,1,0
+Breads,251,0,1,1,1
+Hard Drinks,214,6,1,0,2
+Others,169,0,0.5,0.5,3
+Starchy Foods,148,1,0.5,0.5,3
+Breakfast,110,1,1,1,1
+Seafood,64,0,0,1,2
