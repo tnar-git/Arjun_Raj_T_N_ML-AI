@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+<!-- main html file is from krish naik youtube video ; the image from part is from teh part 13 video by julian nash [[2023-06-13]]-1113-14 -->
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+<link rel="stylesheet" href="./static/css/style.css"> 
+<!-- <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">  -->
+
+<script>
+    function scrollToPredictFunction() {
+        // document.body.scrollTop = 0; // For Safari
+        // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.getElementById('prediction_placeholder_id').scrollIntoView(true);
+        // document.body.scrollTop = 0; // For Safari
+        // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+
+</script>
+</head>
+
+<body>
+
+ <div class="login">
+    <!-- <img src='./static/img/sankaradi_hand_vietnam_colony.png' width='width'/> -->
+
+	<h1>Predict Gender From Hand Image</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    
+    <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
+        <!-- from [Uploading files with Flask - Python on the web - Learning Flask Series Pt. 13 - YouTube](https://www.youtube.com/watch?v=6WruncSoCdI&t=3m40s "Uploading files with Flask - Python on the web - Learning Flask Series Pt. 13 - YouTube") [[2023-06-12]]-1659-54 -->
+        <div class="form-group">
+            <label>Select an image to upload... </label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name="image" id="image" required="required">
+                <label class="custom-file-label" for="image"></label>
+            </div>
+        </div>    
+        <br> 
+        <button onclick="scrollToPredictFunction()" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+        <!-- <button type="submit"  class="btn btn-primary" >Predict image</button> -->
+
+<!--          
+
+    	<input type="text" name="experience" placeholder="Experience" required="required" />
+        <input type="text" name="test_score" placeholder="Test Score" required="required" />
+		<input type="text" name="interview_score" placeholder="Interview Score" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        -->
+    </form>
+
+   <br>
+   <br>
+   <!-- <a name='prediction_placeholder' id='prediction_placeholder_id'>{{ prediction_text }}</a> -->
+   <!-- <a name='prediction_placeholder' id='prediction_placeholder_id'>Gender of the person to which the hand image belongs to was predicted as</a> -->
+
+ </div>
+ <!-- <p>{{ prediction_text }}</p> -->
+
+</body>
+</html>
